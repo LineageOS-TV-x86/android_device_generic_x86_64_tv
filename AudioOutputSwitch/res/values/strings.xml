@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Audio Output Switch</string>
+    <string name="sound_pref_title">Audio output</string>
+    <string name="sound_pref_summary">Choose the media playback device.</string>
+    <string name="audio_output_title">Audio output</string>
+    <string name="audio_output_summary">Select the output device used for media playback.</string>
+    <string name="system_default">System default</string>
+    <string name="unknown_device">Unknown audio device</string>
+    <string name="status_select_device">Choose an output device.</string>
+    <string name="status_selected">Using %1$s for media playback.</string>
+    <string name="status_default_selected">Using the system default audio output.</string>
+    <string name="status_device_unavailable">That audio device is no longer available.</string>
+    <string name="status_saved_device_cleared">Saved device is not currently safe to use: %1$s. Using system default.</string>
+    <string name="status_saved_device_missing">Saved device is not currently available: %1$s.</string>
+    <string name="status_route_rejected">Audio policy did not accept %1$s.</string>
+    <string name="status_default_rejected">Audio policy did not clear the preferred device.</string>
+    <string name="status_route_failed">Audio routing failed: %1$s</string>
+</resources>

@@ -3,7 +3,7 @@ none			/cache		tmpfs	nosuid,nodev,noatime	defaults
 /dev/block/by-name/misc     /misc   emmc    defaults        defaults
 
 /devices/*/block/sr*		auto	auto	defaults		voldmanaged=cdrom:auto
-/devices/*/usb*/*		auto	auto	defaults		voldmanaged=usbdisk:auto,noemulatedsd
+/devices/*/usb*/*		auto	auto	defaults		voldmanaged=usbdisk:auto,noemulatedsd,encryptable=userdata
 /devices/*/mmc0:a*/*		auto	auto	defaults		voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/*/*sdmmc*/*		auto	auto	defaults		voldmanaged=sdcard1:auto,encryptable=userdata
 /devices/*/80860F*:*/mmc_*	auto	auto	defaults		voldmanaged=sdcard1:auto,encryptable=userdata
