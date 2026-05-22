@@ -14,13 +14,16 @@ public final class BootReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String action = intent == null ? null : intent.getAction();
         if (!Intent.ACTION_BOOT_COMPLETED.equals(action)
-                && !ACTION_LOCKED_BOOT_COMPLETED.equals(action)) {
+                && !ACTION_LOCKED_BOOT_COMPLETED.equals(action)
+                && !"android.bluetooth.adapter.action.STATE_CHANGED".equals(action)
+                && !"android.net.wifi.WIFI_STATE_CHANGED".equals(action)) {
             return;
         }
 
-        AudioRouteManager.RouteResult result = AudioRouteManager.applySavedRoute(context);
-        if (!result.success) {
-            Log.w(TAG, result.message);
+        try {
+            context.startService(new Intent(context, BootMaintenanceService.class));
+        } catch (RuntimeException e) {
+            Log.w(TAG, "Unable to start boot maintenance service", e);
         }
     }
 }

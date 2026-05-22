@@ -3,5 +3,8 @@
     <privapp-permissions package="org.lineageos.tv.audiooutput">
         <permission name="android.permission.MODIFY_AUDIO_ROUTING" />
         <permission name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <permission name="android.permission.NETWORK_SETTINGS" />
+        <permission name="android.permission.BLUETOOTH_CONNECT" />
+        <permission name="android.permission.BLUETOOTH_PRIVILEGED" />
     </privapp-permissions>
 </permissions>
