@@ -4,6 +4,9 @@
 
 persist.bluetooth.enablenewavrcp=true
 
+# Make public USB storage app-visible on Android TV x86.
+persist.sys.adoptable=force_on
+
 # Set the Bluetooth Class of Device
 # Service Field: 0x5A -> 90
 #    Bit 17: Networking

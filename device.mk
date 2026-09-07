@@ -174,6 +174,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 $(foreach f,$(wildcard $(LOCAL_PATH)/permissions/*.xml),\
     $(eval PRODUCT_COPY_FILES += $(f):$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/$(notdir $f)))
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sysconfig/hiddenapi-package-whitelist-org.lineageos.tv.audiooutput.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/hiddenapi-package-whitelist-org.lineageos.tv.audiooutput.xml
+
 # Get emulated storage settings
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 

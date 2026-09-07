@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:title="@string/device_display_sound">
+    <com.android.tv.twopanelsettings.slices.SlicePreference
+        android:key="cec"
+        android:title="@string/hdmi_cec_settings_title"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false"
+        custom:uri="@string/cec_settings_slice_uri" />
+    <PreferenceCategory
+        android:key="display_category"
+        android:title="@string/display_category_title" />
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="display_resolution"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false"
+        custom:uri="@string/resolution_slice_uri" />
+    <Preference
+        android:key="font_scale"
+        android:title="@string/font_scale_settings_title"
+        android:fragment="com.android.tv.settings.device.displaysound.FontScalePreferenceFragment" />
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="hdr_and_color_format"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false"
+        custom:uri="@string/hdr_and_color_format_slice_uri" />
+    <SwitchPreference
+        android:key="match_content_dynamic_range"
+        android:persistent="true"
+        android:title="@string/match_content_dynamic_range_title" />
+    <Preference
+        android:key="match_content_frame_rate"
+        android:title="@string/match_content_frame_rate_title"
+        android:fragment="com.android.tv.settings.device.displaysound.MatchContentFrameRateFragment" />
+    <Preference
+        android:key="resolution_selection"
+        android:persistent="true"
+        android:title="@string/resolution_selection_title"
+        android:fragment="com.android.tv.settings.device.displaysound.ResolutionSelectionFragment" />
+    <Preference
+        android:key="advanced_display_settings"
+        android:title="@string/advanced_display_settings_title"
+        android:fragment="com.android.tv.settings.device.displaysound.AdvancedDisplayFragment" />
+    <PreferenceCategory
+        android:key="sound_category"
+        android:title="@string/device_sound" />
+    <com.android.tv.settings.widget.SwitchWithSoundPreference
+        android:key="sound_effects"
+        android:persistent="true"
+        android:title="@string/device_sound_effects" />
+    <com.android.tv.twopanelsettings.slices.SlicePreference
+        android:key="default_audio_output_settings"
+        android:title="@string/default_audio_output_settings_title"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false"
+        custom:uri="@string/default_audio_output_settings_slice_uri" />
+    <com.android.tv.twopanelsettings.slices.EmbeddedSlicePreference
+        android:key="audio_ext"
+        android:fragment="com.android.tv.twopanelsettings.slices.SliceFragment"
+        custom:isPreferenceVisible="false"
+        custom:uri="@string/audio_ext_uri" />
+    <Preference
+        android:key="lineage_audio_output_switch"
+        android:title="@string/audio_output_title"
+        android:summary="@string/audio_output_summary">
+        <intent
+            android:targetPackage="org.lineageos.tv.audiooutput"
+            android:targetClass="org.lineageos.tv.audiooutput.AudioOutputActivity" />
+    </Preference>
+    <Preference
+        android:key="advanced_sound_settings"
+        android:title="@string/advanced_sound_settings_title"
+        android:fragment="com.android.tv.settings.device.displaysound.AdvancedVolumeFragment" />
+</PreferenceScreen>

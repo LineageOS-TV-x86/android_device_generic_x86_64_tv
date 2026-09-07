@@ -1,0 +1,28 @@
+# Amazon Fire TV remote paired as "AR Keyboard" (Bluetooth LE HID).
+#
+# Keep the normal TV remote controls aligned with Generic.kl where practical,
+# but make the remote menu button open Android Settings on this TV build.
+
+key 28    DPAD_CENTER
+key 96    DPAD_CENTER
+key 102   HOME
+key 103   DPAD_UP
+key 105   DPAD_LEFT
+key 106   DPAD_RIGHT
+key 108   DPAD_DOWN
+
+key 113   VOLUME_MUTE
+key 114   VOLUME_DOWN
+key 115   VOLUME_UP
+key 116   POWER
+
+key 127   SETTINGS
+key 139   SETTINGS
+key 158   BACK
+key 164   MEDIA_PLAY_PAUSE
+key 172   HOME
+key 217   SEARCH
+key 231   CALL
+key 353   DPAD_CENTER
+key 582   VOICE_ASSIST
+key 583   ASSIST
